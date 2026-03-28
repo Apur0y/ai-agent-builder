@@ -6,12 +6,11 @@ import CatalogPanel from './components/CatalogPanel'
 import ProviderSelector from './components/ProviderSelector'
 import BuilderCanvas from './components/BuilderCanvas'
 import SavedAgentsPanel from './components/SavedAgentsPanel'
-import { useState } from 'react'
 import MyResume from './components/MyResume'
 import ResumeForm from './components/ResumeForm'
 
 export default function App() {
-  const [isResume,setIsResume]=useState(false)
+  
   const sessionTime = useSessionTimer()
   const {
     data, loading, error, fetchData,
@@ -20,7 +19,7 @@ export default function App() {
     currentProfile, currentSkills, currentLayers,
     agentName, setAgentName,
     savedAgents, saveAgent, loadAgent, deleteAgent, clearAllAgents,
-    toast, setToast,toggleResume,resume
+    toast, setToast,toggleResume,resume,isResume,setIsResume
   } = useAgentBuilder()
 
 

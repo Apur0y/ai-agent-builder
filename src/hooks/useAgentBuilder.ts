@@ -16,6 +16,7 @@ export function useAgentBuilder() {
   const [selectedLayers, setSelectedLayers] = useState<string[]>([])
   const [selectedProvider, setSelectedProvider] = useState('')
   const [resume,setResume]=useState(false)
+  const [isResume,setIsResume]=useState(false)
 
   // ── Save / load UI ───────────────────────────────────────────────────────
   const [agentName, setAgentName] = useState('')
@@ -207,6 +208,7 @@ export function useAgentBuilder() {
     toast,
     setToast,
     toggleResume,
-    resume
+    resume,
+    isResume,setIsResume
   }
 }
