@@ -44,11 +44,11 @@ export default function DropZone({
           const id = e.dataTransfer.getData('text/plain')
           if (id) onDrop(id)
         }}
-        className={`min-h-[90px] rounded-lg p-3 flex flex-col gap-2 transition-all duration-150
+        className={`min-h-22.5 rounded-lg p-3 flex flex-col gap-2 transition-all duration-150
           ${
             isDragOver
               ? 'border-2 border-dashed border-amber-400/60 bg-amber-500/5'
-              : 'border-2 border-dashed border-white/[0.08] bg-white/[0.02]'
+              : 'border-2 border-dashed border-white/8 bg-white/2'
           }`}
       >
         {count === 0 ? (

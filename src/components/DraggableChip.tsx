@@ -16,7 +16,7 @@ export default function DraggableChip({
       draggable
       style={accentColor ? { borderLeftColor: accentColor } : undefined}
       className="group flex items-center gap-2 px-3 py-2 rounded
-        bg-white/[0.04] border border-white/10 border-l-[3px]
+        bg-white/4 border border-white/10 border-l-[3px]
         cursor-grab active:cursor-grabbing
         hover:border-amber-500/30 transition-all duration-150"
     >
@@ -36,7 +36,7 @@ export default function DraggableChip({
       {/* Remove button */}
       <button
         onClick={onRemove}
-        className="text-zinc-600 hover:text-red-400 transition-colors text-base leading-none shrink-0"
+        className="text-zinc-600 hover:text-red-400 transition-colors text-base leading-none shrink-0 cursor-pointer"
         title="Remove"
       >
         ×

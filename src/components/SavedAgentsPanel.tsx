@@ -20,7 +20,7 @@ export default function SavedAgentsPanel({
   if (agents.length === 0) return null
 
   return (
-    <section className="px-6 py-5 border-t border-white/5 bg-white/[0.01]">
+    <section className="px-6 py-5 border-t border-white/5 bg-white/1">
       {/* Section header */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
@@ -34,7 +34,7 @@ export default function SavedAgentsPanel({
 
         <button
           onClick={onClearAll}
-          className="text-[11px] font-mono px-3 py-1 rounded
+          className="text-[11px] font-mono px-3 py-1 rounded cursor-pointer
             bg-red-500/10 border border-red-500/20 text-red-400
             hover:bg-red-500/18 transition-colors"
         >

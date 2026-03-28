@@ -26,8 +26,8 @@ export default function SavedAgentCard({
     : undefined
 
   return (
-    <div className="flex flex-col p-4 rounded-lg bg-white/[0.03] border border-white/[0.08]
-      min-w-[180px] max-w-[220px] flex-1
+    <div className="flex flex-col p-4 rounded-lg bg-white/3 border border-white/8
+      min-w-45 max-w-55 flex-1
       hover:border-amber-500/25 transition-colors duration-150">
 
       {/* Card header */}
@@ -69,7 +69,7 @@ export default function SavedAgentCard({
       <div className="flex gap-2 mt-4">
         <button
           onClick={onLoad}
-          className="flex-1 py-1.5 rounded text-xs font-mono
+          className="flex-1 py-1.5 rounded text-xs font-mono cursor-pointer
             bg-amber-500/10 border border-amber-500/25 text-amber-400
             hover:bg-amber-500/20 transition-colors"
         >
@@ -77,7 +77,7 @@ export default function SavedAgentCard({
         </button>
         <button
           onClick={onDelete}
-          className="px-2.5 py-1.5 rounded text-sm
+          className="px-2.5 py-1.5 rounded text-sm cursor-pointer
             bg-red-500/10 border border-red-500/20 text-red-400
             hover:bg-red-500/20 transition-colors"
         >

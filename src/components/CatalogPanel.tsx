@@ -70,7 +70,7 @@ export default function CatalogPanel({
   };
 
   return (
-    <aside className="flex flex-col border-r border-white/5 bg-white/[0.015] overflow-hidden">
+    <aside className="flex flex-col border-r border-white/5 bg-white/1.5 overflow-hidden ">
       {/* Panel header */}
       <div className="px-5 pt-5 pb-0 border-b border-white/5">
         <p className="text-[10px] tracking-[0.15em] text-zinc-600 font-mono mb-3">
@@ -81,7 +81,7 @@ export default function CatalogPanel({
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-2 text-[11px] font-mono tracking-wider border-b-2 transition-all
+              className={`px-3 py-2 text-[11px] font-mono tracking-wider border-b-2 transition-all cursor-pointer
                 ${
                   activeTab === tab
                     ? "text-amber-400 border-amber-400"
@@ -95,7 +95,7 @@ export default function CatalogPanel({
       </div>
 
       {/* Scrollable list */}
-      <div className="flex-1 overflow-y-auto p-4 flex flex-col gap-2">
+      <div className="max-h-screen overflow-y-auto p-4 flex flex-col gap-2">
         {loading && (
           <p className="text-center text-zinc-600 font-mono text-xs py-8 animate-pulse">
             Syncing config…

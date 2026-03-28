@@ -32,12 +32,12 @@ export default function ProviderSelector({
                   }
                 : undefined
             }
-            className={`flex items-center gap-1.5 px-3 py-1 rounded text-xs font-mono
+            className={`flex items-center gap-1.5 px-3 py-1 rounded text-xs font-mono cursor-pointer
               transition-all duration-150 border
               ${
                 isActive
                   ? ''
-                  : 'border-white/10 bg-white/[0.03] text-zinc-500 hover:border-white/20 hover:text-zinc-300'
+                  : 'border-white/10 bg-white/3 text-zinc-500 hover:border-white/20 hover:text-zinc-300'
               }`}
           >
             <span

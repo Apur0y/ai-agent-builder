@@ -60,7 +60,7 @@ export default function BuilderCanvas({
               </div>
               <button
                 onClick={onRemoveProfile}
-                className="text-zinc-600 hover:text-red-400 text-lg leading-none shrink-0 transition-colors"
+                className="text-zinc-600 hover:text-red-400 text-lg leading-none shrink-0 transition-colors cursor-pointer"
               >
                 ×
               </button>
@@ -140,7 +140,7 @@ export default function BuilderCanvas({
         />
         <button
           onClick={onSave}
-          className="px-5 py-2 rounded bg-linear-to-r from-amber-400 to-yellow-300
+          className="px-5 py-2 rounded bg-linear-to-r from-amber-400 to-yellow-300 cursor-pointer
             text-zinc-900 font-mono text-xs font-semibold tracking-widest
             hover:opacity-90 active:scale-95 transition-all"
         >

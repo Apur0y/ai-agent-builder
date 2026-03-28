@@ -20,7 +20,7 @@ export default function App() {
   } = useAgentBuilder()
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 flex flex-col">
+    <div className="min-h-screen  bg-stone-900 text-zinc-100 flex flex-col">
       <Header
         sessionTime={sessionTime}
         loading={loading}
