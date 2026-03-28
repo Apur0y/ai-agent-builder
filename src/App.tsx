@@ -28,8 +28,8 @@ export default function App() {
       />
 
       {/* Main grid: catalog | builder */}
-      <div className="flex flex-1 overflow-hidden" style={{ minHeight: 0 }}>
-        <div className="w-80 shrink-0 flex flex-col overflow-hidden">
+      <div className="flex flex-1 flex-col items-center md:items-start md:flex-row overflow-hidden" style={{ minHeight: 0 }}>
+        <div className="w-80 shrink-0 flex flex-col overflow-hidden ">
           <CatalogPanel
             data={data}
             loading={loading}
@@ -67,9 +67,6 @@ export default function App() {
             onRemoveLayer={removeLayer}
             onSave={saveAgent}
           />
-        </div>
-      </div>
-
       <SavedAgentsPanel
         agents={savedAgents}
         data={data}
@@ -77,6 +74,9 @@ export default function App() {
         onDelete={deleteAgent}
         onClearAll={clearAllAgents}
       />
+        </div>
+      </div>
+
 
       {toast && (
         <Toast message={toast} onDismiss={() => setToast(null)} />

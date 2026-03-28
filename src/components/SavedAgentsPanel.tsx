@@ -24,7 +24,7 @@ export default function SavedAgentsPanel({
       {/* Section header */}
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <h2 className="text-[10px] font-mono tracking-[0.14em] text-zinc-600">
+          <h2 className="text-[10px] font-mono tracking-[0.14em]  border-white/10 bg-green-700/80 text-zinc-100 hover:border-white/20 hover:text-zinc-50 px-3 py-1 rounded-md">
             SAVED AGENTS
           </h2>
           <span className="text-[10px] font-mono px-1.5 py-px rounded-full bg-amber-500/10 text-amber-500/60">
