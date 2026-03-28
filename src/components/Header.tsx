@@ -4,6 +4,7 @@ interface HeaderProps {
   sessionTime: number
   loading: boolean
   onReload: () => void
+  
 }
 
 export default function Header({ sessionTime, loading, onReload }: HeaderProps) {

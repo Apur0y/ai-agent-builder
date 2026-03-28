@@ -3,11 +3,13 @@ import { PROVIDERS, PROVIDER_COLORS } from '../constants'
 interface ProviderSelectorProps {
   selected: string
   onToggle: (provider: string) => void
+  onToggleResume:() => void
 }
 
 export default function ProviderSelector({
   selected,
   onToggle,
+  onToggleResume
 }: ProviderSelectorProps) {
   return (
     <div className="flex items-center gap-3 px-6 py-3 border-b border-white/5 flex-wrap">
@@ -48,6 +50,8 @@ export default function ProviderSelector({
           </button>
         )
       })}
+      <button onClick={onToggleResume} className='flex items-center gap-1.5 px-3 py-1 rounded text-xs font-mono cursor-pointer
+              transition-all duration-150 border border-white/10 bg-white/3 text-zinc-500 hover:border-white/20 hover:text-zinc-300'> Create AI Resume</button>
     </div>
   )
 }

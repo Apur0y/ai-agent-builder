@@ -6,8 +6,12 @@ import CatalogPanel from './components/CatalogPanel'
 import ProviderSelector from './components/ProviderSelector'
 import BuilderCanvas from './components/BuilderCanvas'
 import SavedAgentsPanel from './components/SavedAgentsPanel'
+import { useState } from 'react'
+import MyResume from './components/MyResume'
+import ResumeForm from './components/ResumeForm'
 
 export default function App() {
+  const [isResume,setIsResume]=useState(false)
   const sessionTime = useSessionTimer()
   const {
     data, loading, error, fetchData,
@@ -16,8 +20,9 @@ export default function App() {
     currentProfile, currentSkills, currentLayers,
     agentName, setAgentName,
     savedAgents, saveAgent, loadAgent, deleteAgent, clearAllAgents,
-    toast, setToast,
+    toast, setToast,toggleResume,resume
   } = useAgentBuilder()
+
 
   return (
     <div className="min-h-screen  bg-stone-900 text-zinc-100 flex flex-col">
@@ -51,7 +56,14 @@ export default function App() {
           <ProviderSelector
             selected={selectedProvider}
             onToggle={toggleProvider}
+            onToggleResume={toggleResume}
           />
+          {resume? 
+          <div>
+            {isResume?<MyResume onClose={toggleResume}/>:<ResumeForm setIsResume={setIsResume} onClose={toggleResume}/>}
+          </div>:
+         
+         <div>        
           <BuilderCanvas
             data={data}
             currentProfile={currentProfile}
@@ -67,6 +79,7 @@ export default function App() {
             onRemoveLayer={removeLayer}
             onSave={saveAgent}
           />
+           </div>}
       <SavedAgentsPanel
         agents={savedAgents}
         data={data}

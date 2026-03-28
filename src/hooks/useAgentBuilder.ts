@@ -15,6 +15,7 @@ export function useAgentBuilder() {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([])
   const [selectedLayers, setSelectedLayers] = useState<string[]>([])
   const [selectedProvider, setSelectedProvider] = useState('')
+  const [resume,setResume]=useState(false)
 
   // ── Save / load UI ───────────────────────────────────────────────────────
   const [agentName, setAgentName] = useState('')
@@ -102,6 +103,14 @@ export function useAgentBuilder() {
   const toggleProvider = useCallback((p: string) => {
     setSelectedProvider((prev) => (prev === p ? '' : p))
   }, [])
+
+
+  const toggleResume=()=>{
+    setResume(!resume)
+    console.log("click funrt")
+  }
+
+
 
   // ── Persist & load agents ─────────────────────────────────────────────────
 
@@ -197,5 +206,7 @@ export function useAgentBuilder() {
     // ui
     toast,
     setToast,
+    toggleResume,
+    resume
   }
 }
